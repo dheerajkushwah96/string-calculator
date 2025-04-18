@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { TextField, Button, Typography, Container } from "@mui/material";
+import { TextField, Button, Typography, Container, Tooltip } from "@mui/material";
 
 const parseNumbers = (input: string): number[] => {
   if (!input) return [];
@@ -43,14 +43,21 @@ const StringCalculator = () => {
       <Typography variant="h4" gutterBottom>
         String Calculator
       </Typography>
-      <TextField
-        fullWidth
-        variant="outlined"
-        label="Enter numbers..."
-        value={input}
-        onChange={(e) => setInput(e.target.value)}
-        margin="normal"
-      />
+      <Tooltip
+        title="Enter numbers separated by commas or new lines. Use // to specify a custom delimiter."
+        arrow
+        placement="right"
+        followCursor
+      >
+        <TextField
+          fullWidth
+          variant="outlined"
+          label="Enter numbers..."
+          value={input}
+          onChange={(e) => setInput(e.target.value)}
+          margin="normal"
+        />
+      </Tooltip>
       <Button
         variant="contained"
         color="primary"
