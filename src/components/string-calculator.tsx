@@ -53,6 +53,7 @@ const StringCalculator = () => {
           fullWidth
           variant="outlined"
           label="Enter numbers..."
+          placeholder="e.g. 1,2,3 or //;1;2;3"
           value={input}
           onChange={(e) => setInput(e.target.value)}
           margin="normal"
