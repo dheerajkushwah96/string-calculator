@@ -1,4 +1,4 @@
-# Getting Started with # string-calculator
+# Getting Started with string-calculator
 
 ## Available Scripts
 
